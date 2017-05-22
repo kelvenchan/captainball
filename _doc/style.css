@@ -1,0 +1,25 @@
+/* Front Page */
+	.front-top{
+		background-image: url('images/bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		height: 974px; }
+
+	.front-top-contents{
+		margin: 35% auto;}
+
+	.front-top h1{
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 80px;
+		font-weight: 900;
+		font-style: italic;
+		letter-spacing: 10px;
+		color: white; }
+
+	.front-top p {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 25px;
+		font-weight: 100;
+		text-transform: uppercase; 
+		color: #ddd; }

@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
 	$('.parallax').parallax();
 
 	$(function(){
-	  $(".ul a").click(function(e){
+	  $("nav a").click(function(e){
 	    e.preventDefault();
 	    $('html,body').scrollTo(this.hash,this.hash); 
 	  });

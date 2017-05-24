@@ -1,3 +1,28 @@
+body{
+	background:#ccffff;
+}
+
+.main-contain{
+		margin: 0 50px;
+		background: rgba(255,255,255,0.5); }
+.button{
+	padding: 20px 30px;
+	text-decoration: none;
+	border-radius: 50px;
+	color: #fff;
+	background: grey;
+	transition: 0.5s; }
+.button:hover{
+	color: #fff;
+	text-decoration: none;
+	background: orange;
+	transition: 0.5s; }
+@media screen and (max-width: 415px){
+	.main-contain{
+		margin: 0;
+	}
+}
+
 /* Front Page */
 	.front-top{
 		background-image: url('images/bg.jpg');
@@ -23,3 +48,241 @@
 		font-weight: 100;
 		text-transform: uppercase; 
 		color: #ddd; }
+	
+/*play*/
+	.play{
+		position: relative;
+		overflow: hidden;
+		height: 400px;
+	}
+	.play img{
+		filter: brightness(0.5);
+		right: -50px;
+		width: 60%;
+		position: absolute;
+		top: 80%;
+		transform: translateY(-50%);
+		-webkit-mask-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1)); /* For Safari 5.1 to 6.0 */
+		-webkit-mask-image: -o-linear-gradient(right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1)); /* For Opera 11.1 to 12.0 */
+		-webkit-mask-image: -moz-linear-gradient(right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
+		-webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1)); /* Standard syntax (must be last) */
+		-webkit-mask-image: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='0', endColorstr='#000');
+	}
+	.play-des{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 10%;
+		width: 30%;}
+
+	@media screen and (max-width: 911px){
+		.play img{
+			top: 50%;
+			width: 100%;
+			right: 0;
+			-webkit-mask-image:unset;
+		}
+		.play-des{
+			padding: 0 20px;
+			text-align: center;
+			width: 100%;
+			color: #fff;
+			left:0;
+		}
+	}
+
+/*Rule*/
+	.rules{
+		position: relative;
+		text-align: center;
+		margin-top: 120px;}
+	.rules-title{
+		padding: 0 20px; }
+	.rules-content{
+		margin: 50px 0;}
+	.rule1{
+		position: relative;
+		overflow: hidden;
+		height: 300px;
+		transition: 0.5s;}
+	.hover-slider .slider-left{
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		box-sizing: border-box;
+		background: rgba(0, 0, 0, 0.5);
+		align-items: center;
+		text-align: center;
+		opacity: 0;
+		transition: all .25s ease-in-out ;
+		-webkit-animation-name: slideOutLeft;
+		animation-name: slideOutLeft;
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s; }
+	.rule1:hover .slider-left,
+	.hover-slider .slider-left:hover{
+		opacity: 1;
+		transition: all .25s ease-in-out ;
+		-webkit-animation-name: slideInLeft;
+		animation-name: slideInLeft;
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;}
+	.hover-slider .slider-right{
+		right: 0;
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		box-sizing: border-box;
+		background: rgba(0, 0, 0, 0.5);
+		align-items: center;
+		text-align: center;
+		opacity: 0;
+		transition: all .25s ease-in-out ;
+		-webkit-animation-name: slideOutRight;
+		animation-name: slideOutRight;
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;}
+	.rule1:hover .slider-right,
+	.hover-slider .slider-right:hover{
+		opacity: 1;
+		transition: all .25s ease-in-out ;
+		-webkit-animation-name: slideInRight;
+		animation-name: slideInRight;
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;}
+	.rule1 .rule-des{
+		z-index: 5;
+		opacity: 0;
+		transition: 0.5s;
+		color: #fff;
+		padding: 0 10%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);}
+	.rule1 .rule-img{
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: 0.5s;}
+	.rule1 .rule-img img{
+		object-fit: cover;
+		width: 100%;
+	}
+	.rule1:hover{
+		height: 500px;
+		transition: 0.5s;}
+	.rule1:hover .rule-img img{
+		transform: scale(1.5);
+		transition: 0.5s;}
+	.rule1:hover .rule-des{
+		opacity: 1;
+		transition: 0.5s;
+		transition-delay: 0.2s;}
+
+
+	@media screen and (max-width: 768px){
+		.rule1 .rule-img img{
+			width: unset;
+			transform: translateX(-15%);
+		}
+	}
+
+	@-webkit-keyframes slideInLeft {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		visibility: visible; }
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0); } }
+	@keyframes slideInLeft {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		visibility: visible; }
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0); } }
+	@-webkit-keyframes slideOutLeft {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+		visibility: visible; }
+	100% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);} }
+	@keyframes slideOutLeft {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+		visibility: visible; }
+	100% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);} }
+
+
+
+	@-webkit-keyframes slideInRight {
+	0% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+		visibility: visible; }
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0); } }
+	@keyframes slideInRight {
+	0% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+		visibility: visible; }
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0); } }
+	@-webkit-keyframes slideOutRight {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+		visibility: visible; }
+	100% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);} }
+	@keyframes slideOutRight {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+		visibility: visible; }
+	100% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);} }
+
+/*join us*/
+	.join-us{
+		text-align: center;
+		color: #fff;
+		background: rgba(0,0,0,0.5);
+		padding: 150px 0;
+	}
+	.join-content{
+		 }
+	.join-content h3{
+		margin-bottom: 50px;}
+
+/*footer*/
+	footer{
+		color: #fff;
+		text-align: center;
+		background: #000; }
+	.footer-content{
+		padding: 50px 0 }
+	.footer-links{
+		font-size: 20px;
+		padding: 20px; }
+	.footer-links a{
+		padding: 10px;
+		color: #fff;
+		transition: 0.5s; }
+	.footer-links a:hover{
+		opacity: 0.5;
+		transition: 0.5s;
+	}

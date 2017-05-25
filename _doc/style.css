@@ -714,8 +714,11 @@ p {
 	}
 	@media only screen and (max-width: 426px){
 		.rule{
-			height: 200px; }
+			height: 225px; }
+		.rule:hover{ 
+			height: 400px; }
 		.rule:hover .rule-img img{
+			transition: 0.5s;
 			transform: scale(2); }
 	}
 

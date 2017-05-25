@@ -5,29 +5,49 @@
 ?>
 
 <!-- Top -->
+
+	<?php
+		$top_bg = get_field('top_bg');
+		$top_description = get_field('top_description');
+		$top_title = get_field('top_title');
+		$button1 = get_field('button1');
+		$button2 = get_field('button2');
+	?>
+
   <div class="parallax-container front-topbg" id="topbar">
     <div class="parallax">
-      <img src="images/bg.jpg">
+      <img src="<?php echo $top_bg ?>">
     </div>
     <div class="front-top-contents">
-      <p>introducing</p>
-      <h1>Captain Ball</h1>
+      <p><?php echo $top_description ?></p>
+      <h1><?php echo $top_title ?></h1>
       <div class="front-top-btn">
-        <a class="button btn-orange" href="#def">Learn More</a>
-        <a class="button btn-grey" href="#join-us">Participate</a>
+        <a class="button btn-orange" href="#def"><?php echo $button1 ?></a>
+        <a class="button btn-grey" href="#join-us"><?php echo $button2 ?></a>
       </div>
     </div>
   </div>
 
 <!-- Definition -->
+
+	<?php
+		$definition_title = get_field('definition_title');
+		$definition_des = get_field('definition_des');
+	?>
+
   <div class="front-section2" id="def">
     <div class="row container front-section2-contents">
-      <h2 class="header">Definition</h2>
-      <p>a game similar to basketball played on an area marked with six circles by teams of seven or more players who try to pass the ball to the player stationed in the end circle.</p>
+      <h2 class="header"><?php echo $definition_title ?></h2>
+      <p><?php echo $definition_des ?></p>
     </div>
   </div>
 
 <!-- Equipments -->
+	
+	<?php
+		$equipments_header = get_field('equipments_header');
+	?>
+
   <div class="front-section3" id="equipments">
     <div class="front-section3-contents">
       <div class="row container">
@@ -37,20 +57,31 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
           <div class="masonry section3-items">
-            <div class="item">
-              <a href=""><img src="images/section3-2.jpg"></a>
-              <div class="section3-text">
-                <h4>Standard Ball</h4>
-                <h6>Any kinds of football or basketball sized ball is acceptable.</h6>
-              </div>
-            </div>
-            <div class="item">
-              <a href=""><img src="images/section3-3.jpg"></a>
-              <div class="section3-text">
-                <h4>Team Apparel</h4>
-                <h6>Bands or other markers may be needed to distinguish teams.</h6>
-              </div>
-            </div>
+
+          	<?php if( have_rows('equipments_items') ): ?>
+
+            
+
+	            <?php while( have_rows('equipments_items') ): the_row(); 
+
+					$item_image = get_sub_field('item_image');
+					$item_title = get_sub_field('item_title');
+					$item_description = get_sub_field('item_description');
+
+				?>
+				<div class="item">
+		            <a href=""><img src="<?php echo $item_image ?>"></a>
+		            <div class="section3-text">
+		              <h4><?php echo $item_title ?></h4>
+		              <h6><?php echo $item_description ?></h6>
+		            </div>
+	            </div>
+	            <?php endwhile; ?>
+
+	       
+
+	    	<?php endif; ?>
+
           </div>
         </div>
         <div class="col-md-2"></div>

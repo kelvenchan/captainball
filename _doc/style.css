@@ -58,7 +58,7 @@ p {
 
 @media screen and (max-width: 768px){
 	h1 {
-		font-size: 60px;}
+		font-size: 60px !important;}
 	h2 {
 		font-size: 55px;}
 	p{
@@ -492,7 +492,7 @@ p {
 
 	@media only screen and (max-width: 425px){
 		.front-section2-contents{
-			padding: 15% 7%;}
+			padding: 15% 7% 15% 5%;}
 		.front-section2 h2 {
 			position: relative;
 			right: 7px;}

@@ -26,4 +26,6 @@ jQuery(document).ready(function(){
 			( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) && stretchyNavs.removeClass('nav-is-visible');
 		});
 	}
+
+	
 });

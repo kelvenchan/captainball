@@ -114,7 +114,7 @@
 	<div class="rules" id="rules">
 		<div class="container rules-contain main-contain">
 			<div class="rules-title">
-				<h2>Bacis Rules of Captainball</h2>
+				<h2><?php echo $rules_title ?></h2>
 			</div>
 		</div>
     <?php if( have_rows('rules_repeater') ): ?>

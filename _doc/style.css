@@ -1,6 +1,14 @@
 body{
 	background: #ddd;
 }
+h1{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 80px;
+	font-weight: 900;
+	font-style: italic;
+	letter-spacing: 10px;
+	margin-top: 0;
+	color: white; }
 
 h2 {
 	font-family: 'Josefin Sans', sans-serif;
@@ -58,13 +66,17 @@ p {
 
 @media screen and (max-width: 768px){
 	h1 {
-		font-size: 60px !important;}
+		font-size: 60px;}
 	h2 {
-		font-size: 55px;}
+		font-size: 45px;}
+	h4 {
+		font-size: 35px; }
 	p{
 		font-size: 15px;}
 	.button{
 		padding: 12px 20px;}
+	.main-contain{
+		padding: 25% 15px; }
 }
 
 /* NavBar */
@@ -339,6 +351,13 @@ p {
 	  transition: all 0.2s;
 	}
 
+	@media screen and (max-width: 768px){
+		.cd-stretchy-nav.nav-is-visible ul i,
+		.cd-stretchy-nav.nav-is-visible ul span {
+			opacity: 1;
+			color: #fff;}
+	}
+
 	.cd-stretchy-nav.nav-is-visible ul span {
 	  opacity: 1;
 	  -webkit-transform: translateX(0);
@@ -446,14 +465,6 @@ p {
 		bottom: 25%;
 		left: 15%;}
 
-	.front-top-contents h1{
-		font-family: 'Josefin Sans', sans-serif;
-		font-size: 80px;
-		font-weight: 900;
-		font-style: italic;
-		letter-spacing: 10px;
-		margin-top: 0;
-		color: white; }
 	.front-top-contents p{
 		font-size: 25px;
 		color: #fff; }
@@ -473,7 +484,7 @@ p {
 			padding-left: 10%; }
 	}
 
-/* Definitiom  */
+/* Definition  */
 	.row {
 		margin-bottom: 0;}
 	.front-section2 {
@@ -482,13 +493,6 @@ p {
 	.front-section2-contents {
 		position: relative;
 		padding: 5% 15px ;}
-
-	@media only screen and (max-width: 768px){
-		.front-section2 p{
-			font-size: 15px;}
-		.front-section2 h2 {
-			font-size: 55px;}
-	}
 
 	@media only screen and (max-width: 425px){
 		.front-section2-contents{
@@ -595,10 +599,9 @@ p {
 	  }
 
 /* Play */
-	.play-bg {
-		height: 700px;}
-	.play-des {
-		}
+	#play img{
+		filter: brightness(0.5);
+	}
 	.play-des h2 {
 		color: #fff;}
 	.play-des p {
@@ -702,15 +705,18 @@ p {
 		transition: 0.5s;
 		transition-delay: 0.2s;}
 
-
 	@media screen and (max-width: 768px){
 		.rule1 .rule-img img{
 			width: unset;
-			transform: translateX(-15%);
-		}
+			transform: translateX(-15%); }
 		.rule .rule-des{
-			padding: 0 10%;
-		}
+			padding: 0 10%; }
+	}
+	@media only screen and (max-width: 426px){
+		.rule{
+			height: 200px; }
+		.rule:hover .rule-img img{
+			transform: scale(2); }
 	}
 
 /*join us*/

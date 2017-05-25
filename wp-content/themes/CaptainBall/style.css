@@ -541,6 +541,8 @@ p {
 		color: #666;
 		background-color: #fff;
 		transition: all .4s ease; }
+	.section3-text p {
+		font-size: 15px !important;}
 	.item:hover {
 		box-shadow: 0 0 15px #000;
 	    transition: all .4s ease;}
@@ -550,6 +552,9 @@ p {
 	    color: #fff;
 	    background-color: #db8a08;
 	    transition: all .4s ease;}
+
+	.item:hover .section3-text p {
+		color: #fff !important;}
 
 	 @media only screen and (max-width: 425px) {
 	    .front-section3-contents {
@@ -623,7 +628,7 @@ p {
 		padding: 5% 0 2% 0;}
 	.rules-contain h2 {
 		color: #fff}
-	.rules-contain p {
+	.rule-des p {
 		color: #ddd;}
 	.rules .rule-des h6 {
 		line-height: 150%;

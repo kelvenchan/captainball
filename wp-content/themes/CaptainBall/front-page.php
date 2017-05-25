@@ -59,6 +59,11 @@
   </div>
 
 <!-- Parallax 2 -->
+  <?php
+    $play_title = get_field('play_title');
+    $play_des = get_field('play_des');
+    $play_bg = get_field('play_bg');
+    ?>
   <div class="parallax-container" id="play">
     <div class="parallax">
       <img src="images/front1.jpg">
@@ -72,60 +77,53 @@
   </div>
 
 <!-- Rule -->
+  <?php
+    $rules_title = get_field('rules_title');
+    ?>
 	<div class="rules" id="rules">
 		<div class="container rules-contain main-contain">
 			<div class="rules-title">
 				<h2>Bacis Rules of Captainball</h2>
 			</div>
 		</div>
-		<div class="rules-content">
+    <?php if( have_rows('rules_repeater') ): ?>
+		  <div class="rules-content">
+
+      <?php while( have_rows('rules_repeater') ): the_row(); 
+        $rule_subtitle = get_sub_field('rule_subtitle');
+        $rule_des = get_sub_field('rule_des');
+        $rule_bg = get_sub_field('rule_bg');
+        ?>
+
 			<div class="rule">
 				<div class="rule-des">
-					<h4>Goal</h4>
-					<h6>The Catcher must catch/hold the Ball with both hands while remaining on the Stool for 3 seconds. The Ball must be released from the Shooter’s hands to the Catcher (No direct passing). The Catcher can throw the Ball back onto Court for play to continue.</h6>
+					<h4><?php echo $rule_subtitle ?></h4>
+					<h6><?php echo $rule_des ?></h6>
 				</div>
 				<div class="rule-img">
-					<img src="images/section5-1.jpg">
+					<img src="<?php echo $rule_bg ?>">
 				</div>
 				<div class="hover-slider">
 					<div class="slider-left"></div>
 					<div class="slider-right"></div>
 				</div>
 			</div>
-			<div class="rule">
-				<div class="rule-des">
-					<h4>Attacking</h4>
-					<h6>The Catcher must be on the Stool at all times. Jumping is allowed. But the Catcher is not allowed to go down from the stool and participate in open play.Attacking Players cannot be in the Defender’s Box at any time.</h6>
-				</div>
-				<div class="rule-img">
-					<img src="images/section5-2.jpg">
-				</div>
-				<div class="hover-slider">
-					<div class="slider-left"></div>
-					<div class="slider-right"></div>
-				</div>
-			</div>
-			<div class="rule">
-				<div class="rule-des">
-					<h4>Defending</h4>
-					<h6>There is a Defender’s Box (2ft radius) in front of the Catcher’s Stool. Only 1 player of the Defending Team is allowed to be in the Defender’s Box at any one time. Defending Players can only tap the Ball away from the Catcher if the Catcher does not catch the Ball with 2 hands.</h6>
-				</div>
-				<div class="rule-img">
-					<img src="images/section5-3.jpg">
-				</div>
-				<div class="hover-slider">
-					<div class="slider-left"></div>
-					<div class="slider-right"></div>
-				</div>
-			</div>
+
+      <?php endwhile; ?>
 		</div>
+    <?php endif; ?>
 	</div>
 
 <!-- Join Us -->
+  <?php
+    $participate_title = get_field('participate_title');
+    $participate_btn = get_field('participate_btn');
+    $participate_btn_link = get_field('participate_btn_link');
+    ?>
 	<div class="container-fuild join-us" id="join-us">
 		<div class="container main-contain">
-			<h2>Want to know more? Check our website link below and join us now!</h2>
-			<a class="button btn-orange" href="https://www.facebook.com/copaibasports" target="_blank">Copa Iba</a>
+			<h2><?php echo $participate_title ?></h2>
+			<a class="button btn-orange" href="<?php echo $participate_btn_link?>" target="_blank"><?php echo $participate_btn?></a>
 		</div>
 	</div>
 

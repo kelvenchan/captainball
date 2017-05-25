@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
 	$('.parallax').parallax();
 
 	$(function(){
-	  $("nav a").click(function(e){
+	  $("nav a, .front-top-btn a").click(function(e){
 	    e.preventDefault();
 	    $('html,body').scrollTo(this.hash,this.hash); 
 	  });
@@ -26,4 +26,6 @@ jQuery(document).ready(function(){
 			( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) && stretchyNavs.removeClass('nav-is-visible');
 		});
 	}
+
+
 });
